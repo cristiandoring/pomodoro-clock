@@ -1,5 +1,39 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
+html{
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+nav{
+    display:flex;
+    
+}
+
+#container{
+    background-color: lightgray;
+    height: 250px;
+    width: 500px;
+    border-radius: 10px;
+    margin: 50px;
+    padding: 50px;
+}
+
+.tipo-intervalo{
+    background-color: rgb(255, 255, 0);
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    
+}
+footer{
+    background-color: antiquewhite;
+}
