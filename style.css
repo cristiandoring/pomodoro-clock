@@ -15,6 +15,13 @@ nav{
     
 }
 
+
+
+#icone-settings{
+    width: 25px;
+    
+}
+
 #container{
     background-color: lightgray;
     height: 250px;
@@ -25,6 +32,7 @@ nav{
 }
 
 .tipo-intervalo{
+    
     background-color: rgb(255, 255, 0);
     padding: 15px;
     border: 2px solid black;
@@ -32,6 +40,28 @@ nav{
     color: black;
     font-weight: bold;
     font-size: 1.2rem;
+    
+}
+
+
+h2{
+    color: black;
+    font-size: 5rem;
+    text-align: center;
+    margin: 10px;
+
+}
+
+#iniciar{
+    background-color:black;
+
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+    color: yellow;
+    font-weight: bold;
+    font-size: 1.5rem;
+    
     
 }
 footer{
