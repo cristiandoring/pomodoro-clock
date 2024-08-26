@@ -21,56 +21,85 @@ h1{
     font-size: 2rem;
 }
 
+li{
+    list-style: none;
+}
 
 #icone-settings{
     padding: 10px 25px;
     width: 25px;
     
+    
 }
 
+/*container principal*/
 #container{
-    background-color: lightgray;
-    height: 250px;
-    width: 500px;
+    background-color: aliceblue;
+    width: 750px;
+    height: 350px;
     border-radius: 10px;
-    margin: 50px;
-    padding: 50px;
+    margin: auto;
     
-    
+
 }
 
+/*container pai botoes tipos de intervalos*/
+.botoes{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
 
+/*filho de botoes*/
 .tipo-intervalo{
     
     background-color: rgb(255, 255, 0);
-    padding: 15px;
+    padding: 20px;
+    margin: 20px;
     border: 2px solid black;
     border-radius: 15px;
     color: black;
     font-weight: bold;
     font-size: 1.2rem;
-    
+
 }
 
+/*container pai tempo h2*/
+.cronometro{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 
+}
+
+/*filho de cronometro*/
 h2{
     color: black;
     font-size: 5rem;
     text-align: center;
     margin: 10px;
+}
+
+/*container pai botao iniciar*/
+.botao-iniciar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 
 }
 
+/*filho de botao iniciar*/
 #iniciar{
+    
     background-color:black;
-
     padding: 15px;
     border: 2px solid black;
-    border-radius: 15px;
+    border-radius: 10px;
     color: yellow;
     font-weight: bold;
     font-size: 1.5rem;
-    align-self: center;
+    margin-top: 20px ;
+    
     
     
 }
