@@ -5,7 +5,7 @@
 }
 
 html{
-    background-color: black;
+    background-color:#0D0D0D;
     color: white;
     height: 100%;
 }
@@ -14,6 +14,7 @@ nav{
     display:flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    margin-bottom: 150px;
 }
 
 h1{
@@ -34,13 +35,11 @@ li{
 
 /*container principal*/
 #container{
-    background-color: aliceblue;
-    width: 750px;
-    height: 350px;
-    border-radius: 10px;
+    background-color: #70818C;
+    width: 700px;
+    height: 450px;
+    border-radius: 18px;
     margin: auto;
-    
-
 }
 
 /*container pai botoes tipos de intervalos*/
@@ -53,10 +52,10 @@ li{
 /*filho de botoes*/
 .tipo-intervalo{
     
-    background-color: rgb(255, 255, 0);
+    background-color: #9FB3BF;
     padding: 20px;
-    margin: 20px;
-    border: 2px solid black;
+    margin: 40px 20px 60px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.0);
     border-radius: 15px;
     color: black;
     font-weight: bold;
@@ -75,9 +74,9 @@ li{
 /*filho de cronometro*/
 h2{
     color: black;
-    font-size: 5rem;
+    font-size: 6rem;
     text-align: center;
-    margin: 10px;
+    margin: 30px;
 }
 
 /*container pai botao iniciar*/
@@ -91,18 +90,26 @@ h2{
 /*filho de botao iniciar*/
 #iniciar{
     
-    background-color:black;
+    background-color:#0D0D0D;
     padding: 15px;
     border: 2px solid black;
     border-radius: 10px;
-    color: yellow;
+    color: white;
     font-weight: bold;
     font-size: 1.5rem;
     margin-top: 20px ;
     
     
     
+    
+}
+
+section > p{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 10px;
 }
 footer{
-    background-color: antiquewhite;
+    background-color: #faebd7;
 }
