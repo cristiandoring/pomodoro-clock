@@ -8,6 +8,7 @@
     
 </head>
 <body>
+    <script src="script.js"></script>
     <header>
         <nav>
             <h1>Pomodoro Clock</h1>
@@ -27,7 +28,10 @@
             <section class="cronometro">
                 <h2>00:00:00</h2>
             </section>
-            <section class="botao-iniciar"><button id="iniciar">Iniciar</button></section>
+            <section class="botao-iniciar"><button class="botao" onclick="iniciar()">Iniciar</button>
+            
+                <button class="botao" onclick="pausar">Pausar </button>
+            </section>
             
         </main>
         

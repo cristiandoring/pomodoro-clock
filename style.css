@@ -40,6 +40,7 @@ li{
     height: 450px;
     border-radius: 18px;
     margin: auto;
+    
 }
 
 /*container pai botoes tipos de intervalos*/
@@ -47,19 +48,22 @@ li{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    
 }
 
 /*filho de botoes*/
 .tipo-intervalo{
     
     background-color: #9FB3BF;
-    padding: 20px;
-    margin: 40px 20px 60px 20px;
+    padding: 10px;
+    margin: 30px 10px 60px 10px;
     border: 2px solid rgba(0, 0, 0, 0.0);
-    border-radius: 15px;
+    border-radius: 10px;
     color: black;
     font-weight: bold;
     font-size: 1.2rem;
+    flex-shrink: 1;
+    flex-grow: 1;
 
 }
 
@@ -77,6 +81,7 @@ h2{
     font-size: 6rem;
     text-align: center;
     margin: 30px;
+    
 }
 
 /*container pai botao iniciar*/
@@ -88,7 +93,7 @@ h2{
 }
 
 /*filho de botao iniciar*/
-#iniciar{
+.botao{
     
     background-color:#0D0D0D;
     padding: 15px;
@@ -98,6 +103,7 @@ h2{
     font-weight: bold;
     font-size: 1.5rem;
     margin-top: 20px ;
+    margin: 5px;
     
     
     

@@ -1,0 +1,7 @@
+function iniciar(){
+
+}
+
+function pausar(){
+    
+}
