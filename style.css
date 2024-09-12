@@ -5,7 +5,7 @@
 }
 
 html{
-    background-color:#0D0D0D;
+    background-color:#8a97a0;
     color: white;
     height: 100%;
 }
@@ -20,6 +20,7 @@ nav{
 h1{
     padding: 10px 25px;
     font-size: 2rem;
+    text-shadow: 1.5px 1px #0D0D0D;
 }
 
 li{
@@ -35,11 +36,12 @@ li{
 
 /*container principal*/
 #container{
-    background-color: #70818C;
+    background-color: #8a97a0;
     width: 700px;
     height: 450px;
     border-radius: 18px;
     margin: auto;
+    box-shadow: 1px 1px 1px 1px black;
     
 }
 
