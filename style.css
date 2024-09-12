@@ -115,9 +115,34 @@ h2{
 section > p{
     text-align: center;
     font-size: 1.5rem;
-    margin: 10px;
+    margin: 30px 10px;
     padding: 10px;
 }
 footer{
-    background-color: #faebd7;
+    width: 100vw;
+    height: 16vh;
+    background-color: #0D0D0D;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer > p{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+footer > p > img{
+    width: 35px;
+    height: auto;
+    background: none;
+    
+}
+footer > p> a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.5rem;
 }
