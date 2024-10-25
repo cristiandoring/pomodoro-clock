@@ -1,25 +1,51 @@
 var segundos = 0;
 var minutos = 50;
 var horas = 0;
-
+var cronometroAtivo = false;
 /*
 const audio = new Audio();
 
 audio.src="./sons/button-9-88354.mp3";
 */
 function iniciar(){
-
-    cronometro()
+// Iniciar apenas se não estiver ativo
+    if (!cronometroAtivo) { 
+        cronometroAtivo = true;
+        
     //chama a função contador a cada 1s (1000ms)
      intervalo = setInterval(cronometro,1000)
 
      //desabilita o botão iniciar após clicar 1x nele
      document.querySelector('#iniciar').disabled = true;
 
-     
+    }
+}
+
+function reiniciar(){
+        
+        clearInterval(intervalo)
+        
+        horas = 0
+        minutos = 50
+        segundos = 0
+
+        cronometroAtivo = false; // Define como não ativo
+        document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
+    
+        // Habilita/desabilita os botões
+        document.querySelector('#iniciar').disabled = false; // Habilita o botão iniciar
+        document.querySelector('#pausar').disabled = true; // Desabilita o botão pausar
 }
 
 
+function pausar() {
+    if (cronometroAtivo) {
+        clearInterval(intervalo); // Para o intervalo
+        cronometroAtivo = false; // Define como não ativo
+        document.querySelector('#iniciar').disabled = false; // Habilita o botão iniciar
+        document.querySelector('#pausar').disabled = true; // Desabilita o botão pausar
+    }
+}
 function cronometro(){
     if (segundos == 0) {
         if (minutos == 0) {
