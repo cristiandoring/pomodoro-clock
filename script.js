@@ -72,6 +72,37 @@ function cronometro(){
     
 }
 
+function reiniciar_intervalo_curto(){
+    clearInterval(intervalo)
+        
+    horas = 0
+    minutos = 10
+    segundos = 0
+
+    cronometroAtivo = false; // Define como não ativo
+    document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
+
+    // Habilita/desabilita os botões
+    document.querySelector('#iniciar').disabled = false; // Habilita o botão iniciar
+    document.querySelector('#pausar').disabled = true; // Desabilita o botão pausar
+}
+
+function reiniciar_intervalo_longo(){
+    clearInterval(intervalo)
+        
+    horas = 0
+    minutos = 15
+    segundos = 0
+
+    cronometroAtivo = false; // Define como não ativo
+    document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
+
+    // Habilita/desabilita os botões
+    document.querySelector('#iniciar').disabled = false; // Habilita o botão iniciar
+    document.querySelector('#pausar').disabled = true; // Desabilita o botão pausar
+}
+
+
 function formatar(digito){
     if(digito <10){
         return("0" + digito)
