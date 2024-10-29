@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form{
+    width: 500px;
+    height: 600px;
+    display: inline-block;
+    background-color:#8a97a0;
+}
+
+.borda{
+    width: 100%;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+form input[type="number"] {
+    width: 100%;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    margin: 8px 0px 8px 25px;
+
+}
+
+form input[type="submit"] {
+    display: block;
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+    width: 50%;
+    height: 35px;
+    margin: auto; 
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+form input[type="submit"]:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+
+#botao-fechar{
+    width: 35px;
+    display: block;
+    margin: 0 0 0 92%;
+}
+
+#botao-fechar:hover{
+    width: 42px;
+}

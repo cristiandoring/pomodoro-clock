@@ -116,7 +116,7 @@ function reiniciar_intervalo_longo(){
     document.querySelector('#iniciar').disabled = false; // Habilita o botão iniciar
     document.querySelector('#pausar').disabled = true; // Desabilita o botão pausar
 }
-/*
+
 function passar_intervalo(){
     //se cronometro não está ativo
     if(!cronometroAtivo){
@@ -133,7 +133,7 @@ function passar_intervalo(){
                 document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
             }
         }
-
+/*
         //se está ativo
     else{
         if(pomodoroAtivo == true){
@@ -161,9 +161,9 @@ function passar_intervalo(){
             cronometroAtivo = false
             document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
         }
+    }*/
     }
-    }
-*/
+
 function formatar(digito){
     if(digito <10){
         return("0" + digito)
