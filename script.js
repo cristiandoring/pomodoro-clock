@@ -112,58 +112,66 @@ function reiniciar_intervalo_longo(){
     cronometroAtivo = false; // Define como não ativo
     document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
 
-    // Habilita/desabilita os botões
+
     document.querySelector('#iniciar').disabled = false; // Habilita o botão iniciar
     document.querySelector('#pausar').disabled = true; // Desabilita o botão pausar
 }
 
-function passar_intervalo(){
-    //se cronometro não está ativo
-    if(!cronometroAtivo){
-        if(minutos == 50){
-            minutos = 15
-            document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
+function passar_intervalo() {
+    // Se o cronômetro não está ativo
+    if (!cronometroAtivo) {
+        if (minutos == 50) {
+            minutos = 10;
+            pomodoroAtivo = false;
+            intervaloCurtoAtivo = true;
+            intervaloLongoAtivo = false;
+        } else if (minutos == 10) {
+            minutos = 15;
+            pomodoroAtivo = false;
+            intervaloCurtoAtivo = false;
+            intervaloLongoAtivo = true;
+        } else if (minutos == 15) {
+            minutos = 50;
+            pomodoroAtivo = true;
+            intervaloCurtoAtivo = false;
+            intervaloLongoAtivo = false;
         }
-        else if(minutos == 15){
-                minutos = 10
-                document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
-            }
-        else if(minutos==10){
-                minutos = 50
-                document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
-            }
+        document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
+    } 
+    // Se o cronômetro está ativo
+    else {
+        if (pomodoroAtivo) {
+            minutos = 10;
+            
+            pomodoroAtivo = false;
+            intervaloCurtoAtivo = true;
+            intervaloLongoAtivo = false;
+        } else if (intervaloCurtoAtivo) {
+            minutos = 15;
+            pomodoroAtivo = false;
+            intervaloCurtoAtivo = false;
+            intervaloLongoAtivo = true;
+        } else if (intervaloLongoAtivo) {
+            minutos = 50;
+            pomodoroAtivo = true;
+            intervaloCurtoAtivo = false;
+            intervaloLongoAtivo = false;
         }
-/*
-        //se está ativo
-    else{
-        if(pomodoroAtivo == true){
-            horas = 0
-            minutos = 10
-            segundos = 0
 
-            cronometroAtivo = false
-            document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
-        }
-        else if(intervaloCurtoAtivo){
-            horas = 0
-            minutos = 15
-            segundos = 0
+        //zera minutos e horas, alterando apenas os minutos
+        segundos = 0;
+        horas = 0;
 
-            cronometroAtivo = false
 
-            document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
-        }
-        else if(intervaloLongoAtivo){
-            horas = 0
-            minutos = 50
-            segundos = 0
-
-            cronometroAtivo = false
-            document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
-        }
-    }*/
+        // Para o cronômetro para definir o novo intervalo
+        cronometroAtivo = false;
+        clearInterval(intervalo);
+        document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
+        document.querySelector('#iniciar').disabled = false; // Reativa o botão de iniciar
     }
+}
 
+    
 function formatar(digito){
     if(digito <10){
         return("0" + digito)
