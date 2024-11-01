@@ -5,14 +5,17 @@ var cronometroAtivo = false;
 var pomodoroAtivo = false;
 var intervaloCurtoAtivo = false;
 var intervaloLongoAtivo = false;
-/*
+
 const audio = new Audio();
 
-audio.src="./sons/button-9-88354.mp3";
-*/
+audio.src="./button-9-88354.mp3";
+
 function iniciar(){
 // Iniciar apenas se não estiver ativo
     if (!cronometroAtivo) { 
+    
+        // Tocar o áudio
+        audio.play();
         cronometroAtivo = true;
         
     //chama a função contador a cada 1s (1000ms)
@@ -46,10 +49,16 @@ function reiniciar(){
 
 function pausar() {
     if (cronometroAtivo) {
+
+        // Tocar o áudio
+        audio.play();
+
         clearInterval(intervalo); // Para o intervalo
         cronometroAtivo = false; // Define como não ativo
         document.querySelector('#iniciar').disabled = false; // Habilita o botão iniciar
         document.querySelector('#pausar').disabled = true; // Desabilita o botão pausar
+
+        
     }
 }
 function cronometro(){
@@ -118,6 +127,14 @@ function reiniciar_intervalo_longo(){
 }
 
 function passar_intervalo() {
+
+    //zera minutos e horas, alterando apenas os minutos
+    segundos = 0;
+    horas = 0;
+
+    // Tocar o áudio
+    audio.play();
+
     // Se o cronômetro não está ativo
     if (!cronometroAtivo) {
         if (minutos == 50) {
@@ -158,17 +175,15 @@ function passar_intervalo() {
             intervaloLongoAtivo = false;
         }
 
-        //zera minutos e horas, alterando apenas os minutos
-        segundos = 0;
-        horas = 0;
-
 
         // Para o cronômetro para definir o novo intervalo
         cronometroAtivo = false;
         clearInterval(intervalo);
-        document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
-        document.querySelector('#iniciar').disabled = false; // Reativa o botão de iniciar
+        
     }
+
+    document.getElementById('relogio').innerText = formatar(horas) + ":" + formatar(minutos) + ":" + formatar(segundos);
+        document.querySelector('#iniciar').disabled = false; // Reativa o botão de iniciar
 }
 
     
