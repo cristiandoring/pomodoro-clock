@@ -127,13 +127,19 @@ section > p{
     padding: 10px;
 }
 footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
     width: 100vw;
-    height: 16vh;
+    height: 12vh;
     background-color: #0D0D0D;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
+    margin:0;
+    padding: 0;
 }
 
 footer > p{
@@ -154,3 +160,25 @@ footer > p> a{
     color: aliceblue;
     font-size: 1.5rem;
 }
+
+/* Configurações para mobile
+@media (max-width: 700px) {
+    h2 {
+        font-size: 3rem; 
+    }
+
+    .tipo-intervalo {
+        flex: 1 1 100%; 
+        font-size: 1.2rem; 
+    }
+
+    .botao {
+        font-size: 1rem; 
+        padding: 0.5rem;
+    }
+    
+    footer{
+        width: 100vw;
+    }
+}
+*/
